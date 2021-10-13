@@ -21,7 +21,14 @@ public class UserRepositoryTest extends WebApplicationTests {
     @Test
     public void saveUserTest(){
         newUser = new User();
-        this.newUser.setUserId("twinklesu");
+        this.newUser.setName("Yubin Shin");
+        this.newUser.setEmail("dbqls2821@gmail.com");
+        this.newUser.setUserId("shinyubin989");
+        this.newUser.setHp("010-8614-2841");
+        this.newUser.setMajor("computer engineering");
+        this.newUser.setPassword("28782821");
+        this.newUser.setNickname("yubin");
+
         this.userRepository.save(newUser);
     }
 }

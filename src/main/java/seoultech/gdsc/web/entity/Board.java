@@ -13,43 +13,43 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Board {
     @Id
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable = false)
-    private String userId;
+    @ManyToOne(targetEntity = User.class)
+    private User user;
 
     @Column(nullable = false)
-    private String password;
+    private int category;
 
     @Column(nullable = false)
-    private String email;
+    private String title;
 
     @Column(nullable = false)
-    private String hp;
-
-    @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
-    private String nickname;
-
-    @Column(nullable = false)
-    private String major;
-
-
-    private String profilePic;
-
-
-    @Column(nullable = false)
-    private Boolean isAuth = false;
+    private String content;
 
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @Column(nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
+
+
+    private String imageUrl;
+
+    @Column(nullable = false)
+    private Boolean isSecret = false;
+
+    @Column(nullable = false)
+    private int likeNum = 0;
+
+    @Column(nullable = false)
+    private int commentNum = 0;
+
+
+
+
 }
