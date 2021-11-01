@@ -19,7 +19,7 @@ public class BoardRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    public void saveBoardTest(){
+    public void saveBoardTest() {
         newBoard = new Board();
         newUser = new User();
         this.newBoard.setUserId(newUser);

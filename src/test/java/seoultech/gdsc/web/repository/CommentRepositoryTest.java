@@ -20,10 +20,12 @@ public class CommentRepositoryTest extends WebApplicationTests {
 
 
     @Test
-    public void saveCommentTest(){
+    public void saveCommentTest() {
         newComment = new Comment();
         newUser = new User();
         newBoard = new Board();
+
+
         this.newComment.setBoardId(newBoard);
         this.newComment.setUserId(newUser);
         this.newComment.setContent("new content");

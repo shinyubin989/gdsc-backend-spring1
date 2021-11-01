@@ -3,11 +3,12 @@ package seoultech.gdsc.web.repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import seoultech.gdsc.web.WebApplicationTests;
 import seoultech.gdsc.web.entity.Liked;
 import seoultech.gdsc.web.entity.User;
 
 @SpringBootTest
-public class LikedRepositoryTest {
+public class LikedRepositoryTest extends WebApplicationTests {
     @Autowired
     private LikedRepository likedRepository;
     private Liked newLiked;
