@@ -15,11 +15,12 @@ public class MessageRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    public void saveMessage(){
+    public void saveMessageTest(){
         newMessage = new Message();
         this.newMessage.setContent("new Content");
         this.newMessage.setToId(newUser);
         this.newMessage.setFromId(newUser);
+
         this.messageRepository.save(newMessage);
 
     }

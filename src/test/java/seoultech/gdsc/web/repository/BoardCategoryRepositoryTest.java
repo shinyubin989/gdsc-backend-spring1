@@ -14,7 +14,7 @@ public class BoardCategoryRepositoryTest extends WebApplicationTests {
     private BoardCategory newBoardCategory;
 
     @Test
-    public void saveBoardCategory(){
+    public void saveBoardCategoryTest(){
         newBoardCategory = new BoardCategory();
         this.newBoardCategory.setCategoryName("자유게시판");
         this.boardCategoryRepository.save(newBoardCategory);

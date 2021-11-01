@@ -15,7 +15,7 @@ public class LikedRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    public void saveLiked(){
+    public void saveLikedTest(){
         newLiked = new Liked();
         this.newLiked.setUserId(newUser);
         this.newLiked.setLikeCategory(5);
