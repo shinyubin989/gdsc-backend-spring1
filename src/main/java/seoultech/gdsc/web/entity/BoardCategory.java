@@ -1,5 +1,6 @@
 package seoultech.gdsc.web.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,20 +14,15 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Message {
+
+public class BoardCategory {
     @Id
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(targetEntity = User.class)
-    private User fromId;
-
-    @ManyToOne(targetEntity = User.class)
-    private User toId;
-
     @Column(nullable = false)
-    private String content;
+    private String categoryName;
 
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();

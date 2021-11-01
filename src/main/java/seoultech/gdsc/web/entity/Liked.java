@@ -21,7 +21,7 @@ public class Liked {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    private User user;
+    private User userId;
 
     @Column(nullable = false)
     private int likeCategory;

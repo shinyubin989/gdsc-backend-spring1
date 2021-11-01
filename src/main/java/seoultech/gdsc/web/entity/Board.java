@@ -20,10 +20,7 @@ public class Board {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    private User user;
-
-    @Column(nullable = false)
-    private int category;
+    private User userId;
 
     @Column(nullable = false)
     private String title;
@@ -32,16 +29,12 @@ public class Board {
     private String content;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
-
-    @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
-
+    private int category;
 
     private String imageUrl;
 
     @Column(nullable = false)
-    private Boolean isSecret = false;
+    private Boolean isSecret = true;
 
     @Column(nullable = false)
     private int likeNum = 0;
@@ -49,7 +42,13 @@ public class Board {
     @Column(nullable = false)
     private int commentNum = 0;
 
+    @Column(nullable = false)
+    private LocalDateTime createdAt = LocalDateTime.now();
 
+    @Column(nullable = false)
+    private LocalDateTime updatedAt = LocalDateTime.now();
 
+    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+    private Boolean isHot = false;
 
 }
