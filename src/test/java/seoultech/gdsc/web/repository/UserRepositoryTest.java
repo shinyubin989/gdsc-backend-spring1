@@ -1,6 +1,5 @@
 package seoultech.gdsc.web.repository;
 
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +14,6 @@ public class UserRepositoryTest extends WebApplicationTests {
 
     @Autowired
     private UserRepository userRepository;
-
     private User newUser;
 
     @Test
@@ -30,6 +28,7 @@ public class UserRepositoryTest extends WebApplicationTests {
         this.newUser.setNickname("yubin");
 
         this.userRepository.save(newUser);
+
     }
 }
 
