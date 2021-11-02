@@ -9,7 +9,7 @@ import seoultech.gdsc.web.entity.User;
 
 import javax.transaction.Transactional;
 
-@Transactional
+
 @SpringBootTest
 public class MessageRepositoryTest extends WebApplicationTests {
     @Autowired
@@ -18,7 +18,6 @@ public class MessageRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    @Transactional
     public void saveMessageTest(){
         newMessage = new Message();
         this.newMessage.setContent("new Content");

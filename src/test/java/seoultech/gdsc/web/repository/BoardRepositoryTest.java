@@ -10,7 +10,7 @@ import seoultech.gdsc.web.entity.User;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
-@Transactional
+
 @SpringBootTest
 public class BoardRepositoryTest extends WebApplicationTests {
 
@@ -20,7 +20,6 @@ public class BoardRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    @Transactional
     public void saveBoardTest() {
         newBoard = new Board();
         newUser = new User();

@@ -9,7 +9,7 @@ import seoultech.gdsc.web.entity.User;
 
 import javax.transaction.Transactional;
 
-@Transactional
+
 @SpringBootTest
 public class LikedRepositoryTest extends WebApplicationTests {
     @Autowired
@@ -18,7 +18,6 @@ public class LikedRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
-    @Transactional
     public void saveLikedTest(){
         newLiked = new Liked();
         this.newLiked.setUser(newUser);

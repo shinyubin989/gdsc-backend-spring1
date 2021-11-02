@@ -10,7 +10,7 @@ import seoultech.gdsc.web.entity.User;
 
 import javax.transaction.Transactional;
 
-@Transactional
+
 @SpringBootTest
 public class CommentRepositoryTest extends WebApplicationTests {
 
@@ -23,7 +23,6 @@ public class CommentRepositoryTest extends WebApplicationTests {
 
 
     @Test
-    @Transactional
     public void saveCommentTest() {
         newComment = new Comment();
         newUser = new User();
