@@ -20,7 +20,7 @@ public class Board {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    private User userId;
+    private User user;
 
     @Column(nullable = false)
     private String title;

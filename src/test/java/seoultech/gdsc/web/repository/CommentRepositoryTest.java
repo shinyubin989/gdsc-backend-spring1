@@ -8,6 +8,9 @@ import seoultech.gdsc.web.entity.Board;
 import seoultech.gdsc.web.entity.Comment;
 import seoultech.gdsc.web.entity.User;
 
+import javax.transaction.Transactional;
+
+@Transactional
 @SpringBootTest
 public class CommentRepositoryTest extends WebApplicationTests {
 
@@ -20,14 +23,14 @@ public class CommentRepositoryTest extends WebApplicationTests {
 
 
     @Test
+    @Transactional
     public void saveCommentTest() {
         newComment = new Comment();
         newUser = new User();
         newBoard = new Board();
 
-
-        this.newComment.setBoardId(newBoard);
-        this.newComment.setUserId(newUser);
+        this.newComment.setBoard(newBoard);
+        this.newComment.setUser(newUser);
         this.newComment.setContent("new content");
         this.commentRepository.save(newComment);
     }

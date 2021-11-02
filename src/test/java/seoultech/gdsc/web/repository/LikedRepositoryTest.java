@@ -7,6 +7,9 @@ import seoultech.gdsc.web.WebApplicationTests;
 import seoultech.gdsc.web.entity.Liked;
 import seoultech.gdsc.web.entity.User;
 
+import javax.transaction.Transactional;
+
+@Transactional
 @SpringBootTest
 public class LikedRepositoryTest extends WebApplicationTests {
     @Autowired
@@ -15,9 +18,10 @@ public class LikedRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
+    @Transactional
     public void saveLikedTest(){
         newLiked = new Liked();
-        this.newLiked.setUserId(newUser);
+        this.newLiked.setUser(newUser);
         this.newLiked.setLikeCategory(5);
         this.newLiked.setRefId(3);
         this.likedRepository.save(newLiked);

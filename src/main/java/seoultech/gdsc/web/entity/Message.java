@@ -20,10 +20,10 @@ public class Message {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    private User fromId;
+    private User from;
 
     @ManyToOne(targetEntity = User.class)
-    private User toId;
+    private User to;
 
     @Column(nullable = false)
     private String content;

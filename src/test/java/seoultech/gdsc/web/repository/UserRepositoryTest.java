@@ -8,7 +8,7 @@ import seoultech.gdsc.web.entity.User;
 
 import javax.transaction.Transactional;
 
-
+@Transactional
 @SpringBootTest
 public class UserRepositoryTest extends WebApplicationTests {
 
@@ -17,6 +17,7 @@ public class UserRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
+    @Transactional
     public void saveUserTest(){
         newUser = new User();
         this.newUser.setName("Yubin Shin");

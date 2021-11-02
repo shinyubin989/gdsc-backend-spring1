@@ -20,10 +20,10 @@ public class Comment {
     private int id;
 
     @ManyToOne(targetEntity = Board.class)
-    private Board boardId;
+    private Board board;
 
     @ManyToOne(targetEntity = User.class)
-    private User userId;
+    private User user;
 
     @Column(nullable = false)
     private int likeNum = 0;

@@ -10,6 +10,7 @@ import seoultech.gdsc.web.entity.User;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
+@Transactional
 @SpringBootTest
 public class BoardRepositoryTest extends WebApplicationTests {
 
@@ -19,10 +20,11 @@ public class BoardRepositoryTest extends WebApplicationTests {
     private User newUser;
 
     @Test
+    @Transactional
     public void saveBoardTest() {
         newBoard = new Board();
         newUser = new User();
-        this.newBoard.setUserId(newUser);
+        this.newBoard.setUser(newUser);
         this.newBoard.setCommentNum(5);
         this.newBoard.setTitle("newTitle");
         this.newBoard.setContent("new content");
