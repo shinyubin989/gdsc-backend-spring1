@@ -28,8 +28,8 @@ public class Board {
     @Column(nullable = false)
     private String content;
 
-    @Column(nullable = false)
-    private int category;
+    @ManyToOne(targetEntity = BoardCategory.class)
+    private BoardCategory boardCategory;
 
     private String imageUrl;
 

@@ -25,6 +25,7 @@ dependencies {
     implementation 'junit:junit:4.13.1'
 	implementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.testng:testng:7.1.0'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.2' // model mapper
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
@@ -36,3 +37,4 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
